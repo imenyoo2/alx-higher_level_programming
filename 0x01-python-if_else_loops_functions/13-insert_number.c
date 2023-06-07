@@ -30,8 +30,8 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (buffer != NULL)
 	{
-		if (number > buffer->n &&
-				(buffer->next == NULL || number < buffer->next->n))
+		if (number >= buffer->n &&
+				(buffer->next == NULL || number <= buffer->next->n))
 		{
 			new->next = buffer->next;
 			buffer->next = new;
