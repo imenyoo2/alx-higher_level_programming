@@ -1,5 +1,8 @@
 #include "lists.h"
 
+
+int len_list(listint_t **head);
+
 /**
  * is_palindrome - checks if list is palindrome
  * @head: the head of the list
