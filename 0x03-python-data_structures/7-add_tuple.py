@@ -7,7 +7,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             buffer.append(0)
             if len(tuple_a) > length:
                 buffer[i] += tuple_a[i]
-            else:
+            elif len(tuple_b) > length:
                 buffer[i] += tuple_b[i]
         else:
             buffer.append(tuple_a[i] + tuple_b[i])
