@@ -6,12 +6,7 @@ class Square:
     """defines a square"""
     def __init__(self, size=0):
         """initializes a new square"""
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.size = size
 
     def area(self):
         """returns the current square area"""
@@ -31,3 +26,11 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
+    def my_print(self):
+        """prints in stdout the square with the char #"""
+        if self.size == 0:
+            print()
+        else:
+            for i in range(self.size):
+                print("#" * self.size)
