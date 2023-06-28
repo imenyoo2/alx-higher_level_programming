@@ -4,5 +4,7 @@ class Square:
     this is a test if the checker will
     pass
     """
-    pass
+    def __init__(self):
+        """initalizing an empty square"""
+        pass
 
