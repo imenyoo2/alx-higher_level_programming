@@ -1,10 +1,5 @@
 #!/usr/bin/python3
+"""this is a module with an empty class Square"""
 class Square:
-    """defines a square bla bla bla
-    this is a test if the checker will
+    """defines a square bla bla bla"""
     pass
-    """
-    def __init__(self):
-        """initalizing an empty square"""
-        pass
-
