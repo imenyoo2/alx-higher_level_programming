@@ -5,9 +5,9 @@
 class Node:
     """defines a node of a singly lined list"""
     def __init__(self, data, next_node=None):
+        """initiate a new Node"""
         self.data = data
         self.next_node = next_node
-
 
     @property
     def data(self):
@@ -51,11 +51,10 @@ class SinglyLinkedList:
             buffer = buffer.next_node
         return result[:-1]
 
-
     def sorted_insert(self, value):
         """inserts a new node in sorted position"""
         new = Node(value)
-        if self.__head == None:
+        if self.__head is None:
             self.__head = new
         else:
             buffer = self.__head
