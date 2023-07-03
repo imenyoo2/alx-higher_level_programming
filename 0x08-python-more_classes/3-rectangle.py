@@ -50,7 +50,6 @@ class Rectangle:
         else:
             return 2 * self.width + 2 * self.height
 
-
     def __str__(self):
         """return the inform string"""
         result = ""
