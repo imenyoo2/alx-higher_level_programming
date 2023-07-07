@@ -11,7 +11,8 @@ def text_indentation(text):
     print_space = True
     for i in text:
         if i in ".?:":
-            print("\n") # prints 2 new lines
+            # prints 2 new lines
+            print("\n")
             print_space = False
         elif i == " " and not print_space:
             continue
