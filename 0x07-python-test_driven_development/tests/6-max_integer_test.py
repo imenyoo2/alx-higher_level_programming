@@ -12,7 +12,7 @@ class TestMaxInteger(unittest.TestCase):
         """testing for positive testing"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4, "max at the end")
         self.assertEqual(max_integer([4, 2, 3, 1]), 4, "max at the beginning")
-        self.assertEqual(max_integer([2, 3, 1]), 4, "max at the middle")
+        self.assertEqual(max_integer([2, 3, 1]), 3, "max at the middle")
         self.assertEqual(max_integer([3]), 3, "list of one element")
         self.assertEqual(max_integer([]), None, "list is empty")
 
