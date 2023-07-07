@@ -1,0 +1,20 @@
+
+
+importing the function:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+normal case:
+	>>> text_indentation("hello: how are you?        im good.")
+	hello
+	<BLANKLINE>
+	how are you
+	<BLANKLINE>
+	im good
+	<BLANKLINE>
+
+text must be string
+	>>> text_indentation(100)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
