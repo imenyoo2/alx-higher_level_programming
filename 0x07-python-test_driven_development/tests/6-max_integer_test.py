@@ -9,18 +9,16 @@ class TestMaxInteger(unittest.TestCase):
     """test case for max_integer"""
 
     def test_normal(self):
-        """testing normal case"""
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        """testing for positive testing"""
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4, "max at the end")
+        self.assertEqual(max_integer([4, 2, 3, 1]), 4, "max at the beginning")
 
     def test_nigative_input(self):
         """testing for nigative number"""
-        self.assertEqual(max_integer([1, -2, 3, 4]), 4)
-        self.assertEqual(max_integer([1, -2, 3, -4]), 3)
-        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
+        self.assertEqual(max_integer([1, -2, 3, 4]), 4, "nigative number")
+        self.assertEqual(max_integer([1, -2, 3, -4]), 3, "nigative number")
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1, "nigative number")
 
-    def test_normal(self):
-        """testing for max at the end"""
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4, "max at the end")
 
 
 if __name__ == '__main__':
