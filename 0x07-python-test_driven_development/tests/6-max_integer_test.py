@@ -14,3 +14,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_nigative_number(self):
         """testing normal case"""
         self.assertEqual(max_integer([1, -2, 3, 4]), 4)
+
+if __name__ == '__main__':
+    unittest.main()
