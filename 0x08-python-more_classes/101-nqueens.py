@@ -55,8 +55,6 @@ class Board:
                 return False
             i = i + 1
 
-        if os.environ.get('DEBUG') in ['1', '3']:
-            print("linear checked!")
         return True
 
     def print_board(self):
@@ -75,10 +73,6 @@ class Board:
             arr.append(buffer)
             buffer = []
         print(arr)
-
-
-if os.environ.get('DEBUG') == '1':
-    print("size = {}".format(size))
 
 
 def print_comb(board, col):
