@@ -1,0 +1,34 @@
+
+first import the function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+this is how to use it
+	>>> add_integer(1, 1)
+	2
+
+a and b must be of type int or float:
+	>>> add_integer("hello", "hi")
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(3, "hi")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+	
+a and b will be casted to int:
+	>>> add_integer(3.1, 2.1)
+	5
+
+	>>> add_integer(2, 9.9)
+	11
+
+	>>> add_integer(4.1, 2.1)
+	6
+
+	>>> add_integer(2, 8.9)
+	10
+
+	>>> add_integer(2.9, 8.9)
+	10

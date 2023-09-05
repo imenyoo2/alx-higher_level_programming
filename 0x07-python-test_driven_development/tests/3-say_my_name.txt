@@ -1,0 +1,24 @@
+
+
+
+import the function
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+using the function
+	>>> say_my_name("John", "Weak")
+	My name is John Weak
+
+first_name and last_name must be string
+	>>> say_my_name(20, "Weak")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+	>>> say_my_name("John", 29)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+default value of last_name is ""
+	>>> say_my_name("John")
+	My name is John 
