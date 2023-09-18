@@ -89,3 +89,15 @@ class Rectangle(Base):
         """returns the string representation for Rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """update the attributes of Rectangle"""
+        try:
+            it = iter(args)
+            self.id = next(it)
+            self.width = next(it)
+            self.height = next(it)
+            self.x = next(it)
+            self.y = next(it)
+        except StopIteration:
+            return
