@@ -29,4 +29,4 @@ class Base:
         fstr = "[" + "{}, " * len(list_objs)
         fstr = fstr[:-2] + "]"
         with open(f"{cls.__name__}.json", "w") as f:
-            f.write(fstr.format(*[x.to_dictionary() for x in list_objs]))
+            f.write(fstr.format(*[cls.to_json_string(x.to_dictionary()) for x in list_objs]))
