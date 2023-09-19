@@ -90,14 +90,36 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the attributes of Rectangle"""
-        try:
-            it = iter(args)
-            self.id = next(it)
-            self.width = next(it)
-            self.height = next(it)
-            self.x = next(it)
-            self.y = next(it)
-        except StopIteration:
-            return
+        if len(args) != 0:
+            try:
+                it = iter(args)
+                self.id = next(it)
+                self.width = next(it)
+                self.height = next(it)
+                self.x = next(it)
+                self.y = next(it)
+            except StopIteration:
+                return
+        else:
+            try:
+                self.id = kwargs['id']
+            except KeyError:
+                pass
+            try:
+                self.width = kwargs['width']
+            except KeyError:
+                pass
+            try:
+                self.height = kwargs['height']
+            except KeyError:
+                pass
+            try:
+                self.x = kwargs['x']
+            except KeyError:
+                pass
+            try:
+                self.y = kwargs['y']
+            except KeyError:
+                pass
