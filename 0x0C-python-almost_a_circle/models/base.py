@@ -38,8 +38,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """creates a new instance of cls with attributes set
-           according to dictionary"""
+        """creates new instance of cls with attributes set to dictionary"""
         buffer = cls(1, 1)
         buffer.update(**dictionary)
         return buffer
