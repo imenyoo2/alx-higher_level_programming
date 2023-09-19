@@ -43,3 +43,15 @@ class Base:
         buffer = cls(1, 1)
         buffer.update(**dictionary)
         return buffer
+
+    @classmethod
+    def load_from_file(cls):
+        """load from json file"""
+        try:
+            with open(f"{cls.__name__}.json", "r") as f:
+                list = cls.from_json_string(f.read())
+                for i in range(len(list)):
+                    list[i] = cls.create(**list[i])
+                return list
+        except FileNotFoundError:
+            return []
