@@ -26,5 +26,5 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save json representation"""
-        with open(f"{cls.__name__}.json", "w") as f:
+        with open(f"{cls.__name__}.json", "w", encoding="utf-8") as f:
             f.write(cls.to_json_string([x.to_dictionary() for x in list_objs]))
