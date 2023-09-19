@@ -35,3 +35,11 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates a new instance of cls with attributes set
+           according to dictionary"""
+        buffer = cls(1, 1)
+        buffer.update(**dictionary)
+        return buffer
