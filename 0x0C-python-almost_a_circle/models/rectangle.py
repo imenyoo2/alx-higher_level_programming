@@ -123,3 +123,13 @@ class Rectangle(Base):
                 self.y = kwargs['y']
             except KeyError:
                 pass
+
+    def to_dictionary(self):
+        """returns the Dictionary representation of Rectangle"""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
