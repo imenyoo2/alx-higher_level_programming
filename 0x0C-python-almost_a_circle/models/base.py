@@ -28,3 +28,10 @@ class Base:
         """save json representation"""
         with open(f"{cls.__name__}.json", "w", encoding="utf-8") as f:
             f.write(cls.to_json_string([x.to_dictionary() for x in list_objs]))
+
+    def from_json_string(json_string):
+        """import from json file"""
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
